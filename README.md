@@ -1,4 +1,4 @@
-# FreshStroreVN
+# FreshStoreVN
 
 Fresh vegetable e-commerce website (React frontend + Spring Boot backend)
 
