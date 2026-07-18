@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { useCart } from '../context/CartContext'
+import { useNavigate } from 'react-router-dom'
 
 function CartPage() {
     const { items, removeFromCart, updateQuantity, totalPrice } = useCart()
-
+    const navigate = useNavigate()
     return (
         <div>
             <Header />
@@ -75,7 +76,9 @@ function CartPage() {
               </span>
                         </div>
 
-                        <button style={styles.checkoutButton}>Tiến hành thanh toán</button>
+                        <button style={styles.checkoutButton} onClick={() => navigate('/checkout')}>
+                            Tiến hành thanh toán
+                        </button>
                     </>
                 )}
             </div>
